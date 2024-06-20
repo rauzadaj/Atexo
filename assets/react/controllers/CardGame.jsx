@@ -14,7 +14,7 @@ function CardGame() {
     const fetchHand = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/cards/draw');
+            const response = await fetch('http://127.0.0.1:8000/api/card/draw');
             const data = await response.json();
             setHand(data);
         } catch (error) {
