@@ -1,5 +1,8 @@
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
+    resource: ../src/Controller/
     type: attribute
+
+api_controllers:
+    resource: ../src/Api/Controller/
+    type: attribute
+    prefix: /api

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Card from './Card'; // Assurez-vous que le chemin est correct
+import Card from './Card';
 
 function CardGame() {
     const [hand, setHand] = useState([]);
@@ -14,7 +14,7 @@ function CardGame() {
     const fetchHand = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/card/draw'); // Chemin vers votre endpoint Symfony
+            const response = await fetch('http://127.0.0.1:8000/api/cards/draw');
             const data = await response.json();
             setHand(data);
         } catch (error) {
@@ -62,7 +62,7 @@ function CardGame() {
                         {hand.map((card) => (
                             <React.Fragment key={`${card.value}-${card.color}`}>
                                 <Card card={card}/>
-                                <br/> {/* Saut de ligne après chaque carte */}
+                                <br/>
                             </React.Fragment>
                         ))}
                     </div>
