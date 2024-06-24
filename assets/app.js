@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import CardGame from './react/controllers/CardGame'; // Assurez-vous que le chemin est correct
+import CardGame from './react/controllers/CardGame'; 
 
-const root = createRoot(document.getElementById('card-game')); // Remplacez 'card-game' par l'id de votre conteneur
+const root = createRoot(document.getElementById('card-game')); 
 root.render(
     <React.StrictMode>
         <CardGame />
