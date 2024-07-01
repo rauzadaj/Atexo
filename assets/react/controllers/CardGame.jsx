@@ -14,7 +14,7 @@ function CardGame() {
     const fetchHand = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/card/draw');
+            const response = await fetch('/api/card/draw');
             const data = await response.json();
             setHand(data);
         } catch (error) {
@@ -27,7 +27,7 @@ function CardGame() {
     const sortHand = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/card/sort', {
+            const response = await fetch('/api/card/sort', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(hand),
